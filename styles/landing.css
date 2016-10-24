@@ -38,12 +38,12 @@
      -webkit-transform: scaleY(0.9) translateY(-3rem) rotateY(180deg);
      -moz-transform: scaleY(0.9) translateY(-3rem) rotateY(180deg);
      transform: scaleY(0.9) translateY(-3rem) rotateY(180deg);
-     -webkit-transition: all 0.5s ease-in-out;
-     -moz-transition: all 0.5s ease-in-out;
-     transition: all 0.5s ease-in-out;
-     -webkit-transition-delay: 0.2s;
-     -moz-transition-delay: 0.2s;
-     transition-delay: 0.2s;
+     -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out;
+     transition: all 1s ease-in-out;
+     -webkit-transition-delay: 0s;
+     -moz-transition-delay: 0s;
+     transition-delay: 0s;
  }
  
  .point .point-title {
