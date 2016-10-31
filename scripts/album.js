@@ -58,6 +58,36 @@ var albumMarconi = {
      ]
 };
 
+var albumNapolitan = {
+    title: 'The Pizza Man',
+    artist: 'Julian Napolitan',
+    label: 'Columbia',
+    year: '2016',
+    albumArtUrl: 'assets/images/album_covers/13.png',
+    songs: [
+        {
+            title: 'Song 1',
+            duration: '1:01'
+        },
+        {
+            title: 'Song 2',
+            duration: '5:01'
+        },
+        {
+            title: 'Song 3',
+            duration: '3:21'
+        },
+        {
+            title: 'Song 4',
+            duration: '3:14'
+        },
+        {
+            title: 'Song 5',
+            duration: '2:15'
+        }
+     ]
+};
+
 var createSongRow = function (songNumber, songName, songLength) {
     var template =
         '<tr class="album-view-song-item">' + '  <td class="song-item-number">' + songNumber + '</td>' + '  <td class="song-item-title">' + songName + '</td>' + '  <td class="song-item-duration">' + songLength + '</td>' + '</tr>';
@@ -78,8 +108,19 @@ var setCurrentAlbum = function (album) {
     albumSongList.innerHTML = '';
     for (var i = 0; i < album.songs.length; i++) {
         albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
-    }
+    };
 };
+
+document.getElementsByClassName('album-cover-art')[0].addEventListener("click", function () {
+    if (document.getElementsByClassName('album-view-title')[0].textContent === "The Colors") {
+        var nextAlbum = albumMarconi;
+    } else if (document.getElementsByClassName('album-view-title')[0].textContent === "The Telephone") {
+        var nextAlbum = albumNapolitan;
+    } else {
+        var nextAlbum = albumPicasso;
+    }
+    setCurrentAlbum(nextAlbum);
+});
 
 window.onload = function () {
     setCurrentAlbum(albumPicasso);
