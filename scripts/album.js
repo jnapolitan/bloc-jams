@@ -88,6 +88,12 @@ var findParentByClassName = function (element, targetClass) {
             currentParent = currentParent.parentElement;
         }
         return currentParent;
+
+        if (currentParent === nil) {
+            alert('No parent found with that class name');
+        };
+    } else {
+        alert('No parent found');
     }
 };
 
